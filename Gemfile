@@ -17,14 +17,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-group :test do
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
-end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'foundation-rails', '~> 5.5'
-gem 'haml-rails'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'pg'
@@ -34,8 +28,6 @@ group :development do
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
-  gem 'html2haml'
-  gem 'rails_layout'
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
@@ -47,6 +39,5 @@ group :development, :test do
   gem 'rspec-rails'
 end
 group :test do
-  gem 'database_cleaner'
   gem 'launchy'
 end
