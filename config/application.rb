@@ -14,7 +14,6 @@ require "active_job/railtie" # Only for Rails >= 4.2
 require "action_cable/engine" # Only for Rails >= 5.0
 require "active_storage/engine" # Only for Rails >= 5.2
 require "sprockets/railtie"
-require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -24,13 +23,16 @@ module MessengerProxy
   class Application < Rails::Application
 
     config.generators do |g|
+      g.helper false
+      g.assets false
+      g.view_specs false
+      g.template_engine false
       g.test_framework :rspec,
         fixtures: true,
         view_specs: false,
         helper_specs: false,
         routing_specs: false,
-        controller_specs: false,
-        request_specs: false
+        controller_specs: false
       g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
 
