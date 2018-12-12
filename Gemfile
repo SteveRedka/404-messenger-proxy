@@ -22,6 +22,7 @@ gem 'foundation-rails', '~> 5.5'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'pg'
+gem 'rest-client'
 
 group :development do
   gem 'better_errors'

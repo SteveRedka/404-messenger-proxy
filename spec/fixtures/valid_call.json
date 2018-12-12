@@ -1,0 +1,9 @@
+{
+  'body': 'foobar'
+  'messengers': {
+    'viber': {
+      'key': '...'
+      'users': ['first', 'second']
+    }
+  }
+}

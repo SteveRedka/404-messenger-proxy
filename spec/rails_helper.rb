@@ -5,16 +5,6 @@ require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 
-# Remove the ActiveRecord constant, because it is autloaded by
-# ActiveStorage and not needed for our application. The presence
-# of the ActiveRecord constant causes rspec-rails to include
-# extra fixture support, which results in:
-#
-#   ActiveRecord::ConnectionNotEstablished:
-#     No connection pool with 'primary' found.
-#
-Object.send(:remove_const, :ActiveRecord)
-
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 

@@ -2,6 +2,6 @@
 class RequestValidator < ActiveModel::Validator
   def validate(request)
     @request = request
-    validates_presence_of :body
+    @request.errors[:body] << "can't be blank" if @request.body.blank?
   end
 end
